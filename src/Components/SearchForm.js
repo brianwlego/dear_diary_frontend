@@ -23,7 +23,6 @@ class SearchForm extends React.Component {
                 'Content-Type': 'application/json',
                 'Accepts': 'application/json'
             }
-            // body: {NO BODY}
         }
 
         fetch('http://localhost:3000/api/v1/users', configObj)

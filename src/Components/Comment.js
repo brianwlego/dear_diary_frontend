@@ -54,7 +54,7 @@ export default class Comment extends React.Component {
 
     showEditButtons = () => {
         return (
-            <div className="buttons post-buttons">
+            <div className="buttons comment-buttons">
                 <span className="close" onClick={this.toggleEditor}>x</span>
                 {this.props.comment.user_id === this.props.user.id ? <button className="comment-edit edit" onClick={() => this.props.editComment(this.state.comment)} >Edit</button> : null}
                 <button className="comment-delete delete" onClick={() => this.props.deleteComment(this.state.comment)}  >Delete</button>

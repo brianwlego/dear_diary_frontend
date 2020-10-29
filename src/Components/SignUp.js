@@ -44,8 +44,8 @@ export default class SignUp extends React.Component {
             <input type="text" name="last_name" placeholder="Last name" value={this.state.lastName} onChange={this.changeHandler} />
             <input type="date" name="birthdate" placeholder="Birthday" value={this.state.birthdate} onChange={this.changeHandler} />
             <input type="text" name="email" placeholder="Email" value={this.state.email} onChange={this.changeHandler} />
-            <input type="text" name="password" placeholder="Password" value={this.state.password} onChange={this.changeHandler} />
-            <input type="text" name="password_confirmation" placeholder="Confirm Password" value={this.state.password_confirmation} onChange={this.changeHandler} />
+            <input type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.changeHandler} />
+            <input type="password" name="password_confirmation" placeholder="Confirm Password" value={this.state.password_confirmation} onChange={this.changeHandler} />
             <input type="file" name="profile_picture" accept="image/*" onChange={this.pictureHandler} />
             {/* <input type="text" name="img_url" placeholder="Profil Picture URL" value={this.state.img_url} onChange={this.changeHandler} /> */}
             {this.props.error ? <p>Please enter a valid First Name, Last Name, Email and/or Password</p> : null}
