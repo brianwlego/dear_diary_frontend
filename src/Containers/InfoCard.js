@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom'
 import img from "../Components/blank-profile-pic.png"
 
 class InfoCard extends React.Component {
-    
+
     following = () => {
         return this.props.profileFriends.map(friend => friend.id)
     }
@@ -21,7 +21,7 @@ class InfoCard extends React.Component {
         })
     }
 
-    render(){
+    render() {
         return (
             <div id="info-card">
                 <div id="about-and-follow">
@@ -29,7 +29,7 @@ class InfoCard extends React.Component {
                         <img id="profile" alt="" src={img} /> :
                         <img id="profile" alt="" src={this.props.profileUser.img_url} />
                     }
-                    <h2>About {this.props.profileUser.first_name}</h2>
+                    <h2>{this.props.profileUser.user_name}</h2>
                     {this.props.profileUser.id !== this.props.currentUser.id ?
                         <button id="follow-button" onClick={this.props.followOrUnfollow}>
                             {this.following().includes(this.props.currentUser.id) ? 'Unfollow' : 'Follow'}

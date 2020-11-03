@@ -40,13 +40,13 @@ export default class Login extends React.Component {
 
             <div id="welcome">
                 <div id="title-lines">
-                    <h1>! facebook</h1>
+                    <h1>! fcebook</h1>
                     <h3>Returning truthy values since 2020</h3>
                 </div>
                 <div id="login">
                     <form id="login-form" onSubmit={this.loginHandler}>
                         <input type="text" name="email" placeholder="Email" value={this.state.email} onChange={this.changeHandler} />
-                        <input type="text" name="password" placeholder="Password" value={this.state.password} onChange={this.changeHandler} />
+                        <input type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.changeHandler} />
                         <input type="submit" value="Log In" onClick={this.submitHandler} />
                     </form>
                     {this.props.error ? <p>Please enter a valid Email and/or Password</p> : null}

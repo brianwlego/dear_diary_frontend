@@ -5,6 +5,9 @@ div#signup-modal {
     align-items: center;
     height: 100%;
     width: 100%;
+
+    background: rgba(241, 248, 255, 0.75);
+
 }
 
 div#signup {

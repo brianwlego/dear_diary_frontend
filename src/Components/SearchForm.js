@@ -23,7 +23,6 @@ class SearchForm extends React.Component {
                 'Content-Type': 'application/json',
                 'Accepts': 'application/json'
             }
-            // body: {NO BODY}
         }
 
         fetch('https://notfcebook-backend.herokuapp.com/api/v1/users', configObj)
