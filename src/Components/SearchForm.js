@@ -26,7 +26,7 @@ class SearchForm extends React.Component {
             // body: {NO BODY}
         }
 
-        fetch('http://localhost:3000/api/v1/users', configObj)
+        fetch('https://notfcebook-backend.herokuapp.com/api/v1/users', configObj)
             .then(resp => resp.json())
             .then(users => this.setState(() => ({ usersArray: users })))
     }

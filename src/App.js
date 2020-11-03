@@ -21,7 +21,7 @@ class App extends React.Component {
   componentDidMount() {
     const token = localStorage.getItem("token")
     if (token) {
-      fetch('http://localhost:3000/api/v1/profile', {
+      fetch('https:/https://notfcebook-backend.herokuapp.com/api/v1/profile', {
         method: 'GET',
         headers: { Authorization: `Bearer ${token}` }
       })
@@ -45,7 +45,7 @@ class App extends React.Component {
       },
       body: JSON.stringify({ user: userInfo })
     }
-    fetch('http://localhost:3000/api/v1/login', configObj)
+    fetch('https:/https://notfcebook-backend.herokuapp.com/api/v1/login', configObj)
       .then(resp => resp.json())
       .then(userData => {
 
@@ -71,7 +71,7 @@ class App extends React.Component {
       method: 'POST',
       body: formData
     }
-    fetch('http://localhost:3000/api/v1/users', configObj)
+    fetch('https:/https://notfcebook-backend.herokuapp.com/api/v1/users', configObj)
       .then(resp => resp.json())
       .then(userData => {
         localStorage.setItem("token", userData.jwt);

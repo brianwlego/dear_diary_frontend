@@ -50,7 +50,7 @@ export default class PostContainer extends React.Component {
             },
             // body: JSON.stringify({comment: updateComment})
         }
-        fetch(`http://localhost:3000/api/v1/posts/${commentObj.post_id}/comments/${commentObj.id}`, configObj)
+        fetch(`https://notfcebook-backend.herokuapp.com/api/v1/posts/${commentObj.post_id}/comments/${commentObj.id}`, configObj)
             .then(resp => resp.json())
             .then(post => {
                 this.setState(() => ({
@@ -73,7 +73,7 @@ export default class PostContainer extends React.Component {
                 },
                 body: JSON.stringify({ comment: updateComment })
             }
-            fetch(`http://localhost:3000/api/v1/posts/${this.state.commentEditObj.post_id}/comments/${this.state.commentEditObj.id}`, configObj)
+            fetch(`https://notfcebook-backend.herokuapp.com/api/v1/posts/${this.state.commentEditObj.post_id}/comments/${this.state.commentEditObj.id}`, configObj)
                 .then(resp => resp.json())
                 .then(post => {
                     this.setState(() => ({
@@ -98,7 +98,7 @@ export default class PostContainer extends React.Component {
                 },
                 body: JSON.stringify({ comment: newComment })
             }
-            fetch(`http://localhost:3000/api/v1/posts/${newComment.post_id}/comments/`, configObj)
+            fetch(`https://notfcebook-backend.herokuapp.com/api/v1/posts/${newComment.post_id}/comments/`, configObj)
                 .then(resp => resp.json())
                 .then(post => {
                     this.setState(() => ({

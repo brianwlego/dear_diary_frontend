@@ -32,7 +32,7 @@ class Home extends React.Component {
                 'Accepts': 'application/json'
             }
         }
-        fetch(`http://localhost:3000/api/v1/users/${this.props.user.id}/home`, configObj)
+        fetch(`https:/https://notfcebook-backend.herokuapp.com/api/v1/users/${this.props.user.id}/home`, configObj)
             .then(resp => resp.json())
             .then(posts => {
                 this.setState(() => ({
@@ -67,7 +67,7 @@ class Home extends React.Component {
                 },
                 body: JSON.stringify({ post: newPost })
             }
-            fetch(`http://localhost:3000/api/v1/posts/${this.state.editPostObj.id}`, configObj)
+            fetch(`https:/https://notfcebook-backend.herokuapp.com/api/v1/posts/${this.state.editPostObj.id}`, configObj)
                 .then(resp => resp.json())
                 .then(updatedPost => {
                     let newArray = this.state.homePosts
@@ -94,7 +94,7 @@ class Home extends React.Component {
                 headers: { 'Authorization': `Bearer ${localStorage.getItem("token")}` },
                 body: formData
             }
-            fetch(`http://localhost:3000/api/v1/posts/`, configObj)
+            fetch(`https:/https://notfcebook-backend.herokuapp.com/api/v1/posts/`, configObj)
             .then(resp => resp.json())
             .then(postObj => {
                 console.log(postObj)
@@ -155,7 +155,7 @@ class Home extends React.Component {
             },
             body: JSON.stringify({ id: postObj.id, post: postObj })
         }
-        fetch(`http://localhost:3000/api/v1/posts/${postObj.id}`, configObj)
+        fetch(`https:/https://notfcebook-backend.herokuapp.com/api/v1/posts/${postObj.id}`, configObj)
             .then(resp => resp.json())
             .then(message => {
                 if (message.success) {

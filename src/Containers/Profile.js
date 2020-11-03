@@ -33,7 +33,7 @@ class Profile extends React.Component {
                 'Accepts': 'application/json'
             }
         }
-        fetch(`http://localhost:3000/api/v1/users/${profileId}/profile`, configObj)
+        fetch(`https:/https://notfcebook-backend.herokuapp.com/api/v1/users/${profileId}/profile`, configObj)
             .then(resp => resp.json())
             .then(profile => {
                 this.setState(() => ({
@@ -61,7 +61,7 @@ class Profile extends React.Component {
                 },
                 body: JSON.stringify({ post: newPost })
             }
-            fetch(`http://localhost:3000/api/v1/posts/${this.state.editPostObj.id}`, configObj)
+            fetch(`https:/https://notfcebook-backend.herokuapp.com/api/v1/posts/${this.state.editPostObj.id}`, configObj)
                 .then(resp => resp.json())
                 .then(updatedPost => {
                     let newArray = this.state.posts
@@ -88,7 +88,7 @@ class Profile extends React.Component {
                 headers: { 'Authorization': `Bearer ${localStorage.getItem("token")}` },
                 body: formData
             }
-            fetch(`http://localhost:3000/api/v1/posts/`, configObj)
+            fetch(`https:/https://notfcebook-backend.herokuapp.com/api/v1/posts/`, configObj)
                 .then(resp => resp.json())
                 .then(postObj => {
                     console.log(postObj)
@@ -150,7 +150,7 @@ class Profile extends React.Component {
             },
             body: JSON.stringify({ follow: { follower_id: this.props.user.id, followed_user_id: this.state.profileUser.id } })
         }
-        fetch(`http://localhost:3000/api/v1/users/${this.props.user.id}/follow`, configObj)
+        fetch(`https:/https://notfcebook-backend.herokuapp.com/api/v1/users/${this.props.user.id}/follow`, configObj)
             .then(resp => resp.json())
             .then(message => {
                 if (message.success) {
@@ -176,7 +176,7 @@ class Profile extends React.Component {
             },
             body: JSON.stringify({ follow: { follower_id: this.props.user.id, followed_user_id: this.state.profileUser.id } })
         }
-        fetch(`http://localhost:3000/api/v1/users/${this.props.user.id}/unfollow`, configObj)
+        fetch(`https:/https://notfcebook-backend.herokuapp.com/api/v1/users/${this.props.user.id}/unfollow`, configObj)
             .then(resp => resp.json())
             .then(message => {
                 if (message.success) {
@@ -206,7 +206,7 @@ class Profile extends React.Component {
             },
             body: JSON.stringify({ id: postObj.id, post: postObj })
         }
-        fetch(`http://localhost:3000/api/v1/posts/${postObj.id}`, configObj)
+        fetch(`https:/https://notfcebook-backend.herokuapp.com/api/v1/posts/${postObj.id}`, configObj)
             .then(resp => resp.json())
             .then(message => {
                 if (message.success) {

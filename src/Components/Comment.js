@@ -21,7 +21,7 @@ export default class Comment extends React.Component {
             },
             body: JSON.stringify({ comment_like: commentObj })
         }
-        fetch(`http://localhost:3000/api/v1/posts/${this.state.comment.post_id}/comments/${this.state.comment.id}/like`, configObj)
+        fetch(`https:/https://notfcebook-backend.herokuapp.com/api/v1/posts/${this.state.comment.post_id}/comments/${this.state.comment.id}/like`, configObj)
             .then(resp => resp.json())
             .then(comment => {
                 this.setState(() => ({
@@ -43,7 +43,7 @@ export default class Comment extends React.Component {
             }
             // body: JSON.stringify({comment_like: newCommentLike})
         }
-        fetch(`http://localhost:3000/api/v1/posts/${this.state.comment.post_id}/comments/${this.state.comment.id}/unlike/${foundCommentLike.id}`, configObj)
+        fetch(`https:/https://notfcebook-backend.herokuapp.com/api/v1/posts/${this.state.comment.post_id}/comments/${this.state.comment.id}/unlike/${foundCommentLike.id}`, configObj)
             .then(resp => resp.json())
             .then(comment => this.setState(() => ({
                 comment: comment.comment,

@@ -9,7 +9,7 @@ class InfoCard extends React.Component {
     }
     friends = () => {
         return this.props.profileFriends.map(user => {
-            return <a href={`http://localhost:3001/profile/${user.id}`} >
+            return <a href={`https://notfcebook.herokuapp.com/profile/${user.id}`} >
                 <li>
                     {user.img_url ?
                         <img id="friend-list-img" key={user.id} alt="" src={user.img_url} /> :
