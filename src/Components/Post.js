@@ -23,7 +23,7 @@ export default class Post extends React.Component {
             },
             body: JSON.stringify({ post_like: newLikeObj })
         }
-        fetch(`https:/https://notfcebook-backend.herokuapp.com/api/v1/posts/${newLikeObj.post_id}/like`, configObj)
+        fetch(`https://notfcebook-backend.herokuapp.com/api/v1/posts/${newLikeObj.post_id}/like`, configObj)
             .then(resp => resp.json())
             .then(post => this.setState(() => ({
                 post: post.post,
@@ -43,7 +43,7 @@ export default class Post extends React.Component {
                 'Accepts': 'application/json'
             }
         }
-        fetch(`https:/https://notfcebook-backend.herokuapp.com/api/v1/posts/${foundPostLike.post_id}/unlike/${foundPostLike.id}`, configObj)
+        fetch(`https://notfcebook-backend.herokuapp.com/api/v1/posts/${foundPostLike.post_id}/unlike/${foundPostLike.id}`, configObj)
             .then(resp => resp.json())
             .then(post => this.setState(() => ({
                 post: post.post,
