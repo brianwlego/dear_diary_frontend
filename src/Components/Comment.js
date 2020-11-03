@@ -81,7 +81,7 @@ export default class Comment extends React.Component {
         return (
             <div className="comment" >
                 <div className="comment-words">
-                    this.props.comment.user_url ?
+                    {this.props.comment.user_url ?
                         <a href={`/profile/${this.props.comment.user_id}`}><img id="post" alt="" src={this.props.comment.user_url} /></a> :
                         <a href={`/profile/${this.props.comment.user_id}`}><img id="post" alt="Alt" src={img} /></a>
                     }
