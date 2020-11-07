@@ -48,7 +48,6 @@ class App extends React.Component {
     fetch('https://notfcebook-backend.herokuapp.com/api/v1/login', configObj)
       .then(resp => resp.json())
       .then(userData => {
-
         localStorage.setItem("token", userData.jwt);
         localStorage.setItem("userId", userData.user.id);
         this.setState(() => ({

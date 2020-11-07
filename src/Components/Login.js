@@ -31,6 +31,13 @@ export default class Login extends React.Component {
         this.props.displayHandler()
     }
 
+    justLooking = () => {
+        this.props.appLoginHandler({
+            email: "justlooking@gmail.com",
+            password: "1234"
+        })
+    }
+
     submitHandler = () => {
         this.props.appLoginHandler(this.state)
     }
@@ -53,6 +60,10 @@ export default class Login extends React.Component {
                     <div id="not-a-member">
                         <p>Not a member?</p>
                         <button id="signup-from-login" onClick={this.clickHandler}>Sign Up</button>
+                    </div>
+                    <div id="not-a-member">
+                        <p>Just looking around?</p>
+                        <button id="signup-from-login" onClick={this.justLooking}>Click Here</button>
                     </div>
                 </div>
             </div>

@@ -27,7 +27,8 @@ div#login form#login-form {
     flex-direction: column;
 }
 
-div#login input[type="text"] {
+div#login input{
+    padding-left: 5%;
     font-size: 16px;
 }
 div#login input[type="submit"] {
