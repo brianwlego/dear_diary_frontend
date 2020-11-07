@@ -9,7 +9,7 @@
 }
 
 #home .post {
-    max-width: 40vw;
+    width: 45vw;
     height: fit-content;
     margin: 2% 0;
 }
