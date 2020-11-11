@@ -15,7 +15,7 @@
 
 #profile #info-card {
     height: fit-content;
-    width: 25%;
+    width: 20rem;
     padding: 10px;
     margin-top: 3.5vh;
     border-style: none;
@@ -30,6 +30,8 @@
 #about-and-follow {
     display: flex;
     align-items: center;
+    height: 15vh;
+    width: 100%;
     padding: 20px 20px 25px 20px;
 }
 
@@ -79,9 +81,9 @@ li {
 }
 
 img#profile {
-    max-height: 150px;
-    width: auto;
-    min-width: 100px;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
 }
 
 img#friend-list-img {
