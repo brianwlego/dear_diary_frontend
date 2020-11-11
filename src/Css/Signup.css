@@ -47,7 +47,7 @@ div#signup input[type=submit]:hover {
     background-color: #32a4e2;
 }
 
-.close, button {
+#signup .close, #signup button {
     border-style: none;
     float: right;
 }

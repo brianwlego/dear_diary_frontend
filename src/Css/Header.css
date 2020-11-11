@@ -1,57 +1,105 @@
 #header {
     position: fixed;
-    display: flex;
-    height: 10vh;
+    top: 0;
+    width: 100vw;
+    height: 8vh;
+    z-index: 1;
 
-    position: relative;
-    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* justify-content: space-between;
+    align-items: center; */
+
     background-color: #73c4f0;
 }
+#profile-button {
+    margin-top: 0px;
+    right: 12.5%;
+    background: none;
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+} 
 
-button#logout-button, #profile-button, button#home-button, #user-name {
-    position: absolute;
-    height: 40%;
-    top: 30%;
-    font-size: large;
+/**** CENTER ****/
+#header-center{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+#search-bar {
+    height: 3.5vh;
+    width: 100%;
+    align-items: center;
+}
+#search-bar input {
+    height: 100%;
+    width: 25vw;
+    border-style: none;
+    border-radius: 15px;
+    padding-left: 15px;
+}
+
+/**** LEFT  ****/
+#header-left{
+    height: 100%;
+    /* width: 100; */
+    display: flex;
+    align-items: center;
+}
+button#home-button{
+    /* height: 40%; */
+    font-size: x-large; 
+    background: none;
+    border: none;
+    width: auto;
+    color: white;
+}
+
+
+/**** RIGHT  ****/
+#header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 75px;
+    /* width: 10vw; */
+}
+
+#closer-together{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 button#logout-button {
-    margin-top: 3px;
     color: white;
     font-weight: bold;
     background: none;
 }
 
 button#home-button {
-    margin-left: 2%;
     background: none;
     border-style: none;
-
-    max-width: 12%;
-
     font-weight: bold;
     font-size: x-large;
     color: white;
 }
 
-#profile-button {
-    margin-top: 0px;
-    right: 12.5%;
-    background: none;
-    height: 50%;
-    width: 2.5%;
-    object-fit: cover;
-}
-
+/* button#logout-button, #profile-button, button#home-button, #user-name {
+    /* position: absolute; */
+    /* height: 40%;
+    top: 30%; */
+    /* font-size: large;
+} 
 
 button#logout-button {
     right: 3.5%;
 }
 
 #user-name {
-    margin-top: 8px;
-    right: 16.5%;
+    margin-right: 5px;
     background: none;
     color: white;
-    height: 50%;
-}
+
+}  */

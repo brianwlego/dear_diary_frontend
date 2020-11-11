@@ -1,11 +1,11 @@
 #home {
+    margin-top: 8vh;
     min-height: 100%;
-    overflow-y: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    overflow: scroll;
+
 }
 
 #home .post {

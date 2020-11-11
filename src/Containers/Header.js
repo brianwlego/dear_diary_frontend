@@ -18,11 +18,21 @@ function Header(props) {
     }
     return (
         <div id="header">
-            <Link to={'/home'}><button id="home-button">! fcebook</button></Link>
-            <SearchForm formClickHandler={props.formClickHandler} />
-            <a href={`/profile/${props.user.id}`}>{chooseImage()}</a>
-            <a href={`/profile/${props.user.id}`}><p id="user-name">{props.user.first_name}</p></a>
-            <button id="logout-button" onClick={props.appLogout}>Log Out</button>
+            <div id="header-left">
+                <Link to={'/home'}><button id="home-button">! fcebook</button></Link>
+            </div>
+            <div id="header-center">
+                <SearchForm formClickHandler={props.formClickHandler} />
+            </div>
+            < div id="header-right">
+
+                <div id="closer-together">
+                    <a href={`/profile/${props.user.id}`}><p id="user-name">{props.user.first_name} </p></a>
+                    <a href={`/profile/${props.user.id}`}>{chooseImage()}</a>
+                </div>
+                <button id="logout-button" onClick={props.appLogout}>Log Out</button>
+
+            </div>
         </div>
     )
     //<img id="profile-button" onClick={clickHandler} alt="Alt" src={require("../Components/blank-profile-pic.png")} />

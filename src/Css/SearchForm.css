@@ -1,20 +1,19 @@
-#search-bar {
-    height: 40%;
-    margin-top: 3vh;
-    margin-left: 15%;
+/* #search-bar {
+    height: 100%;
+    width: 100%;
 
     align-items: center;
 }
 
 #search-bar input {
     height: 100%;
-    width: 200px;
+    width: 100%;
 
     border-style: none;
     border-radius: 15px;
 
-    padding-left: 10%;
-}
+    padding-left: 0;
+} */
 
 #search-bar li {
     position: relative;
