@@ -1,14 +1,17 @@
 #home {
     min-height: 100%;
     overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     overflow: scroll;
 }
 
 #home .post {
-    max-width: 40vw;
+    width: 45vw;
     height: fit-content;
-    margin: auto;
-    margin-top: 2%
+    margin: 2% 0;
 }
 
 #home #post-form{
