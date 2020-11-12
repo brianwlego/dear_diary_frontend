@@ -33,7 +33,6 @@
 }
 
 #about-and-follow h2 {
-    margin-right: auto;
     font-size: 2vw;
 }
 
@@ -78,19 +77,29 @@ li {
     font-size: large;
 }
 
-img#profile {
+img#profile-pic {
     height: 150px;
-    min-width: 150px;
-}
-
-img#friend-list-img {
-    max-height: 25px;
-    width: auto;
-    margin-right: 5%;
+    width: 150px;
 }
 
 img#post {
     height: 30px;
     width: 30px;
     margin-right: 5%;
+}
+#info-card-friends-wrapper{
+    border-top: 1px solid lightgray;
+}
+
+.friend-li{
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+.friend-li p{
+    margin: 3% 0 3% 3%;
+}
+.friend-li img{
+    height: 25px;
+    width: 25px;
 }

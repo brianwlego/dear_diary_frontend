@@ -10,13 +10,13 @@ class InfoCard extends React.Component {
     friends = () => {
         return this.props.profileFriends.map(user => {
             return <a href={`https://notfcebook.herokuapp.com/profile/${user.id}`} >
-                <li>
+                <div className="friend-li">
                     {user.img_url ?
                         <img id="friend-list-img" key={user.id} alt="" src={user.img_url} /> :
                         <img id="friend-list-img" key={user.id} alt="" src={img} />
                     }
-                    {user.user_name}
-                </li>
+                    <p>{user.user_name}</p>
+                </div>
             </a>
         })
     }
@@ -26,8 +26,8 @@ class InfoCard extends React.Component {
             <div id="info-card">
                 <div id="about-and-follow">
                     {!this.props.profileUser.img_url ?
-                        <img id="profile" alt="" src={img} /> :
-                        <img id="profile" alt="" src={this.props.profileUser.img_url} />
+                        <img id="profile-pic" alt="" src={img} /> :
+                        <img id="profile-pic" alt="" src={this.props.profileUser.img_url} />
                     }
                     <h2>{this.props.profileUser.user_name}</h2>
                     {this.props.profileUser.id !== this.props.currentUser.id ?
@@ -43,9 +43,9 @@ class InfoCard extends React.Component {
                     <h4>Birthday</h4>
                     <p>{this.props.profileUser.birthday}</p>
                 </div>
-                <div>
+                <div id="info-card-friends-wrapper">
                     <h4>Friends</h4>
-                    <ul>{this.friends()}</ul>
+                    <div id="info-cards-friends">{this.friends()}</div>
                 </div>
             </div >
         )

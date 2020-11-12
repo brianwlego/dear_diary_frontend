@@ -3,11 +3,13 @@
     margin-right: 10px;
 }
 
-.like-component button {
+.like-button {
     background: none;
     font-size: x-large;
+    border: none;
 }
 
-.like-component button:hover {
+.like-button:hover {
     cursor: pointer;
+    background: none;
 }

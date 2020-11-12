@@ -52,7 +52,14 @@ class SearchForm extends React.Component {
     }
 
     mapUsers = () => {
-        return this.state.suggestions.map(user => <a href={`/profile/${localStorage.getItem("userId")}`}><li key={user.id} onClick={(e) => this.clickHandler(e, user.id)}>{`${user.first_name} ${user.last_name}`}</li></a>)
+        return this.state.suggestions.map(user => 
+            <a href={`/profile/${localStorage.getItem("userId")}`}>
+                <div className="search-bar-li"
+                    key={user.id} 
+                    onClick={(e) => this.clickHandler(e, user.id)}>
+                    <p>{`${user.first_name} ${user.last_name}`}</p>
+                </div>
+            </a>)
     }
 
     renderSuggestions = () => {
@@ -61,9 +68,9 @@ class SearchForm extends React.Component {
             return null
         } else {
             return (
-                <ul>
+                <div id="search-ul">
                     {this.mapUsers()}
-                </ul>
+                </div>
             )
         }
     }
