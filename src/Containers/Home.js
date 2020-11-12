@@ -121,7 +121,7 @@ class Home extends React.Component {
             fileReader.readAsDataURL(file)
             fileReader.onloadend = () =>{
                 this.setState(()=>({
-                    post_photoURL: [fileReader.result, ... this.state.post_photoURL]
+                    post_photoURL: [fileReader.result, ...this.state.post_photoURL]
                 }))
             }
         }

@@ -113,7 +113,7 @@ class App extends React.Component {
       <div id="app-container">
         {this.state.user ? <Header user={this.state.user} appLogout={this.appLogout} formClickHandler={this.formClickHandler} /> : null}
         {this.state.signup ? <SignUp appSignupHandler={this.appSignupHandler} displayHandler={this.displayHandler} error={this.state.error} /> : null}
-        {this.state.photoModal ? <PhotoModal showOrHideModal={this.showOrHideModal} photos={this.state.photoArray} showOrHideModal={this.showOrHideModal} /> : null}
+        {this.state.photoModal ? <PhotoModal showOrHideModal={this.showOrHideModal} photos={this.state.photoArray} /> : null}
         <Switch>
 
           <Route
