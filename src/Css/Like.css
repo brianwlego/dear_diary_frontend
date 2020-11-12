@@ -11,5 +11,5 @@
 
 .like-button:hover {
     cursor: pointer;
-    background: none;
+    color: none;
 }

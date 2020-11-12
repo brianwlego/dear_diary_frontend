@@ -38,10 +38,11 @@
     padding-left: 15px;
 
 }
-#search-bar:active{
-    border: 1px solid rgb(198, 196, 196);
-    border-radius: 15px;
+#search-bar input:focus{
+    outline: 0;
+    box-shadow: 0 0 0 1pt rgb(121, 163, 255);
 }
+
 
 /**** LEFT  ****/
 #header-left{
@@ -73,7 +74,6 @@ button#home-button{
     align-items: center;
     justify-content: space-between;
     margin-right: 5%;
-    width: 6.5vw;
 }
 
 button#logout-button {
@@ -84,6 +84,7 @@ button#logout-button {
 
 #user-name {
     background: none;
+    margin-right: 1vw;
     color: white;
 
 } 

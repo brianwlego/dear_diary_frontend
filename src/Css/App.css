@@ -17,6 +17,10 @@ a:visited {
   color: black;
 }
 
+button:focus{
+  outline: 0;
+}
+
 img {
   border-radius: 50%;
   object-fit: cover;
@@ -109,10 +113,11 @@ input[type="text"] {
 
 #photo-modal img {
   border-radius: 0;
-  object-fit: none;
+  max-width: 100vw;
   width: auto;
-
+  max-height: 100vh;
   z-index: 2;
+
 }
 
 #photo-modal #fraction {

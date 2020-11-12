@@ -87,9 +87,6 @@ img.menu {
     width: 50%;
 }
 
-.post button:hover {
-    background: rgba(222, 222, 222, 1)
-}
 
 .post .extra, .post .close:hover {
     cursor: pointer;
