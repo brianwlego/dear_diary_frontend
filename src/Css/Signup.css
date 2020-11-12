@@ -51,3 +51,11 @@ div#signup input[type=submit]:hover {
     border-style: none;
     float: right;
 }
+
+input[type=date]{
+    padding: 0 5%;
+
+}
+input[type=password]{
+    padding-left: 5%;
+}
