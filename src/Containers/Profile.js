@@ -91,7 +91,6 @@ class Profile extends React.Component {
             fetch(`https://notfcebook-backend.herokuapp.com/api/v1/posts/`, configObj)
                 .then(resp => resp.json())
                 .then(postObj => {
-                    console.log(postObj)
                     this.setState(() => ({
                         posts: [postObj.post, ...this.state.posts],
                         content: "",
@@ -132,7 +131,6 @@ class Profile extends React.Component {
     }
 
     edit = (postObj) => {
-        console.log("edit obj: ", postObj)
         this.setState(() => ({
             editContent: postObj.content,
             editPostObj: postObj
@@ -140,7 +138,6 @@ class Profile extends React.Component {
     }
 
     follow = () => {
-        console.log('current user', this.props.user)
         const configObj = {
             method: 'POST',
             headers: {

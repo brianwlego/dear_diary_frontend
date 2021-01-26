@@ -97,7 +97,6 @@ class Home extends React.Component {
             fetch(`https://notfcebook-backend.herokuapp.com/api/v1/posts/`, configObj)
             .then(resp => resp.json())
             .then(postObj => {
-                console.log(postObj)
                 this.setState(() => ({
                     homePosts: [postObj.post, ...this.state.homePosts],
                     content: "",

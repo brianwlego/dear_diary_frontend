@@ -33,7 +33,6 @@ export default class Post extends React.Component {
     }
 
     postRemoveLike = (likeObj) => {
-        console.log(this.state)
         const foundPostLike = this.state.likes.find(like => like.user_id === likeObj.user_id)
         const configObj = {
             method: 'DELETE',
